@@ -37,13 +37,9 @@ public class ProductConfiguration {
 	public LocalContainerEntityManagerFactoryBean entityManagerFactoryBean(EntityManagerFactoryBuilder 
 			builder,@Qualifier("productDatasource")DataSource dataSource) {
 		
-		Map<String, Object> properties = new HashMap<>();
-		properties.put("hibernate.hbm2ddl.auto", "update");
-		properties.put("hibernate.dialect", "org.hibernate.dialect.PostgreSQL82Dialect");
-		
+
 		return builder
 				.dataSource(dataSource)
-				.properties(properties)
 				.packages("springBootMultipleDatabase.model.product")
 				.persistenceUnit("Product")
 				.build();
