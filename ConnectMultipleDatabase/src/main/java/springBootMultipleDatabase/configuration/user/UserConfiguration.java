@@ -1,8 +1,5 @@
 package springBootMultipleDatabase.configuration.user;
 
-import java.util.HashMap;
-import java.util.Map;
-
 import javax.persistence.EntityManagerFactory;
 import javax.sql.DataSource;
 
